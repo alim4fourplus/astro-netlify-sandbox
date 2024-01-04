@@ -1,9 +1,8 @@
-export default async(req,context){
+export default async (req, context) => {
+  const { city, country } = context.params;
+  return new Response(`This is the ${city} and this is the ${country}`);
+};
 
-    const {city,country} = context.params;
-    return new Response(`This is the ${city} and this is the ${country}`)
-}
-
-export const config={
-    path:'/travel/:city/:country'
-}
+export const config = {
+  path: "/travel/:city/:country",
+};
